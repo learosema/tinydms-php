@@ -3,7 +3,7 @@
 use Slim\Http\Request;
 use Slim\Http\Response;
 
-
+/*
 function getDBInstance()
 {
     $db_exists = file_exists('database.sqlite');
@@ -21,7 +21,7 @@ function getDBInstance()
 
 
     }
-}
+} */
 
 
 // Routes
