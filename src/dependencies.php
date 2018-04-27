@@ -19,16 +19,14 @@ $container['logger'] = function ($c) {
 };
 
 
-$container['storage'] = function ($c) {
-    // I'd like to setup a PDO database connection here.
-    // TODO: is this the right place for it?
-
+$container['db'] = function ($c) {
+    // Setup a PDO database instance
     $db_exists = file_exists('database.sqlite');
     $db = new PDO('sqlite:database.sqlite');
     $file_db->setAttribute(PDO::ATTR_ERRMODE, 
                             PDO::ERRMODE_EXCEPTION);
     if (! $db_exists) {
-        
+        // TODO: add some schema to the database
         // https://www.if-not-true-then-false.com/2012/php-pdo-sqlite3-example/
         // http://www.sqlitetutorial.net/sqlite-autoincrement/
         $db->exec("CREATE TABLE IF NOT EXISTS users (
