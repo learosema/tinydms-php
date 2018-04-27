@@ -1,0 +1,12 @@
+openapi: 3.0.0
+info:
+  title: TinyDMS
+  description: TinyDMS - A microservice for a simple document management system
+  version: 0.1.0
+
+servers:
+  - url: http://localhost:8080/
+    description: local dev server
+
+paths:
+
