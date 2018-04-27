@@ -3,6 +3,7 @@ tinydms-php is a work-in-progress microservice for a simple document management 
 ## Requirements
 
 * PHP 5.5+
+* [Composer](https://getcomposer.org)
 
 ## Specs
 
