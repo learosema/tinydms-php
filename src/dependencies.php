@@ -17,3 +17,23 @@ $container['logger'] = function ($c) {
     $logger->pushHandler(new Monolog\Handler\StreamHandler($settings['path'], $settings['level']));
     return $logger;
 };
+
+
+$container['storage'] = function ($c) {
+    // I'd like to setup a PDO database connection here.
+    // TODO: is this the right place for it?
+
+    $db_exists = file_exists('database.sqlite');
+    $db = new PDO('sqlite:database.sqlite');
+    $file_db->setAttribute(PDO::ATTR_ERRMODE, 
+                            PDO::ERRMODE_EXCEPTION);
+    if (! $db_exists) {
+        
+        // https://www.if-not-true-then-false.com/2012/php-pdo-sqlite3-example/
+        // http://www.sqlitetutorial.net/sqlite-autoincrement/
+        $db->exec("CREATE TABLE IF NOT EXISTS users (
+            username TEXT NOT NULL
+        )");
+    }
+    return $db;
+};
