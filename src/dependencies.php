@@ -2,7 +2,6 @@
 // DIC configuration
 
 $container = $app->getContainer();
-$hello_world = new HelloClass();
 
 // view renderer
 $container['renderer'] = function ($c) {
