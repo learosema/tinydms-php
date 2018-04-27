@@ -11,6 +11,7 @@ tinydms-php is a work-in-progress microservice for a simple document management 
 ## Running the application
 
 Before you can run the application, you have to install the dependencies via `composer install`.
+
 To start a development server at http://localhost:8080/, type `composer start`. 
 
 The application uses PHP's built-in http's server.
