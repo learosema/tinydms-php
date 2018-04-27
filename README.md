@@ -1,27 +1,17 @@
-# Slim Framework 3 Skeleton Application
+tinydms-php is a work-in-progress microservice for a simple document management system based on the [Slim Framework](https://slimframework.com).
 
-Use this skeleton application to quickly setup and start working on a new Slim Framework 3 application. This application uses the latest Slim 3 with the PHP-View template renderer. It also uses the Monolog logger.
+## Requirements
 
-This skeleton application was built for Composer. This makes setting up a new Slim Framework application quick and easy.
+* PHP 5.5+
 
-## Install the Application
+## Specs
 
-Run this command from the directory in which you want to install your new Slim Framework application.
+* Coming soon.
 
-    php composer.phar create-project slim/slim-skeleton [my-app-name]
+## Running the application
 
-Replace `[my-app-name]` with the desired directory name for your new application. You'll want to:
+Before you can run the application, you have to install the dependencies via `composer install`.
+To start a development server at http://localhost:8080/, type `composer start`. 
 
-* Point your virtual host document root to your new application's `public/` directory.
-* Ensure `logs/` is web writeable.
+The application uses PHP's built-in http's server.
 
-To run the application in development, you can run these commands 
-
-	cd [my-app-name]
-	php composer.phar start
-
-Run this command in the application directory to run the test suite
-
-	php composer.phar test
-
-That's it! Now go build something cool.
