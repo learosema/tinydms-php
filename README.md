@@ -14,5 +14,7 @@ Before you can run the application, you have to install the dependencies via `co
 
 To start a development server at http://localhost:8080/, type `composer start`. 
 
-The application uses PHP's built-in http's server.
+The application uses PHP's built-in development web server and a flat file database using SQLite.
+So, you don't need to setup Apache/MySQL/whatever on your development machine.
+
 
