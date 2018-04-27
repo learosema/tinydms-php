@@ -2,6 +2,7 @@
 // DIC configuration
 
 $container = $app->getContainer();
+$hello_world = new HelloClass();
 
 // view renderer
 $container['renderer'] = function ($c) {
@@ -23,8 +24,8 @@ $container['db'] = function ($c) {
     // Setup a PDO database instance
     $db_exists = file_exists('database.sqlite');
     $db = new PDO('sqlite:database.sqlite');
-    $file_db->setAttribute(PDO::ATTR_ERRMODE, 
-                            PDO::ERRMODE_EXCEPTION);
+    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
     if (! $db_exists) {
         // TODO: add some schema to the database
         // https://www.if-not-true-then-false.com/2012/php-pdo-sqlite3-example/
