@@ -1,12 +1,66 @@
 openapi: 3.0.0
+servers:
+  - url: http://localhost:8080/
+    description: local dev server
+
 info:
   title: TinyDMS
   description: TinyDMS - A microservice for a simple document management system
   version: 0.1.0
 
-servers:
-  - url: http://localhost:8080/
-    description: local dev server
-
+tags:
+  - name: admins
+    description: Secured Admin-only calls
+  - name: users
+    description: Operations available to regular users
+  - name: guests
+    description: Operations available without authentication
+    
 paths:
+  /folders:
+    get:
+      tags:
+        - users
+        - admins
+        - guests
+      summary: Returns a list of folders
+      responses:
+        '200':
+          description: A JSON array of folders
 
+  /files:
+    get:
+      tags:
+        - users
+        - admins
+        - guests
+      summary: Returns a list of files
+      responses:
+        '200':
+          description: A JSON array of files
+
+components:
+  User:
+    type: object
+    required:
+      - name
+    properties:
+      name:
+        type: string
+        example: Administrator
+      role:
+        type: string
+        example: admin
+        default: guest
+  Folder:
+    type: object
+    required:
+      - name
+    properties:
+      name:
+        type: string
+        example: Documents
+  File:
+    type: object
+    required:
+      - name
