@@ -7,7 +7,7 @@ tinydms-php is a work-in-progress microservice for a simple document management 
 
 ## Specs
 
-* Coming soon.
+* [OpenAPI 3.0.0 specification](https://github.com/terabaud/tinydms-php/blob/master/public/spec/openapi.yaml)
 
 ## Running the application
 
@@ -17,5 +17,4 @@ To start a development server at http://localhost:8080/, type `composer start`.
 
 The application uses PHP's built-in development web server and a flat file database using SQLite.
 So, you don't need to setup Apache/MySQL/whatever on your development machine.
-
 
