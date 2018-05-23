@@ -40,27 +40,28 @@ paths:
           description: A JSON array of files
 
 components:
-  User:
-    type: object
-    required:
-      - name
-    properties:
-      name:
-        type: string
-        example: Administrator
-      role:
-        type: string
-        example: admin
-        default: guest
-  Folder:
-    type: object
-    required:
-      - name
-    properties:
-      name:
-        type: string
-        example: Documents
-  File:
-    type: object
-    required:
-      - name
+  schemas:
+    User:
+      type: object
+      required:
+        - name
+      properties:
+        name:
+          type: string
+          example: Administrator
+        role:
+          type: string
+          example: admin
+          default: guest
+    Folder:
+      type: object
+      required:
+        - name
+      properties:
+        name:
+          type: string
+          example: Documents
+    File:
+      type: object
+      required:
+        - name
